@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# GREIT Test Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  
 
-## Available Scripts
+Цей проект є тестовим завданням для демонстрації роботи з React, та іншими сучасними веб-технологіями. Нижче наведено опис структури проекту, його компонентів та функціональності.
+Посиалння на деплой: https://vana123.github.io/greit-test-task/
 
-In the project directory, you can run:
+## Структура проекту
 
-### `npm start`
+### Основні файли
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **App.js**: Головний компонент додатку, який відповідає за рендеринг основного інтерфейсу.
+- **index.js**: Точка входу в додаток, яка монтує React-додаток у DOM.
+- **index.scss**: Глобальні стилі для додатку.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Папка `assets`
 
-### `npm test`
+Містить статичні ресурси, такі як зображення та іконки:
+- `no-image.jpg`: Зображення-заглушка для відсутніх зображень.
+- Папка `icons/`: SVG-іконки для різних елементів інтерфейсу.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Папка `components`
 
-### `npm run build`
+Містить реюзабельні React-компоненти:
+- **ImageSlider.js**: Компонент для відображення слайдера зображень.
+- **Layout.js**: Компонент для організації загального макету сторінки.
+- **LoadingSpinner.js**: Компонент для відображення індикатора завантаження.
+- **Pagination.js**: Компонент для пагінації списків.
+- **PropertyCard.js**: Компонент для відображення картки нерухомості.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Папка `styles`
+- **GlobalStyles.js**: Глобальні стилі, які застосовуються до всього додатку.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Папка `utils`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Містить утилітарні функції:
+- **formatPropertiesData.js**: Функція для форматування даних про нерухомість.
+- **getData.js**: Функція для отримання даних з API або інших джерел.
 
-### `npm run eject`
+## Функціональність
+- Відображення списку нерухомості з використанням компоненту `PropertyCard`.
+- Підтримка пагінації через компонент `Pagination`.
+- Завантаження даних з API за допомогою утиліти `getData.js`.
+- Відображення слайдера зображень для кожної нерухомості через `ImageSlider`.
+- LocalStorage використовується для збереження актуальної сторінки (пагінації) між перезавантаженнями сторінки. Коли користувач переходить на іншу сторінку або оновлює сторінку браузера, стан пагінації відновлюється з LocalStorage, завдяки чому йому не потрібно починати з першої сторінки знову.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Технології
+-   React
+- styled-components
+-   JavaScript (ES6+)
+-   Webpack (або Create React App)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
